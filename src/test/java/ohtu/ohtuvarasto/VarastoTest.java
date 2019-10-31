@@ -138,18 +138,18 @@ public class VarastoTest {
     }
     
     @Test
+    public void tilanteenTulostus() {
+        varasto.lisaaVarastoon(8);
+        // merkkijonoesityksen pitäisi kertoa, että saldo on 8 ja vielä mahtuu 2
+        assertEquals("saldo = 8.0, vielä tilaa 2.0", varasto.toString());
+    }
+    
+    @Test
     public void liikaaOttaminenEiLisääLiikaaTilaa() {
         varasto.lisaaVarastoon(8);
         varasto.otaVarastosta(12);
         // varastossa pitäisi olla tilaa 10 - 8 + 12 > 10, eli 10
         assertEquals(10, varasto.paljonkoMahtuu(), vertailuTarkkuus);
-    }
-    
-    @Test
-    public void tilanteenTulostus() {
-        varasto.lisaaVarastoon(8);
-        // merkkijonoesityksen pitäisi kertoa, että saldo on 8 ja vielä mahtuu 2
-        assertEquals("saldo = 8.0, vielä tilaa 2.0", varasto.toString());
     }
     
     
