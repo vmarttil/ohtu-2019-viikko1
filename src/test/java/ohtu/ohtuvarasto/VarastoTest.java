@@ -134,7 +134,7 @@ public class VarastoTest {
     public void liikaaOttaminenPalauttaaOikeanMaaran() {
         varasto.lisaaVarastoon(8);
         double saatuMaara = varasto.otaVarastosta(12);
-        assertEquals(6, saatuMaara, vertailuTarkkuus);
+        assertEquals(8, saatuMaara, vertailuTarkkuus);
     }
     
     @Test
