@@ -56,5 +56,11 @@ public class Main {
         saatiin = mehua.otaVarastosta(-32.9);
         System.out.println("saatiin " + saatiin);
         System.out.println("Mehuvarasto: " + mehua);
+
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 10; j++) {
+                mehua.lisaaVarastoon(1);
+            }
+        }
     }
 }
